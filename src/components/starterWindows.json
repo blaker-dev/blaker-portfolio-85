@@ -1,0 +1,20 @@
+[
+  {
+    "id": "about",
+    "title": "about_me.txt",
+    "icon": "📝",
+    "content": "This is all about me! Welcome to my portfolio"
+  },
+  {
+    "id": "projects",
+    "title": "my_projects",
+    "icon": "📁",
+    "content": "Here is a list of my recent web development projects...'"
+  },
+  {
+    "id": "contact",
+    "title": "contact_info.txt",
+    "icon": "🌐",
+    "content": "Email: b.robinson.cse@gmail.com \nGitHub: @blaker-dev \nLinkedIn: @blake-robinson002400"
+  }
+]

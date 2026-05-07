@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  font-family: 'MS Sans Serif', 'Tahoma', sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.win95-desktop {
+  background-color: #00807F; 
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Desktop Icons */
+.icon-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100px;
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  text-align: center;
+}
+
+.desktop-icon:active .icon-text {
+  background-color: #000080;
+  border: 1px dotted white;
+}
+
+.icon-graphic {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.icon-text {
+  font-size: 12px;
+  padding: 2px 4px;
+
+  max-width: 90px;
+}
+
+/* Windows */
+.win95-window {
+  position: absolute;
+  width: 400px;
+  min-height: 250px;
+  background-color: #c0c0c0;
+  padding: 2px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  box-shadow: inset -1px -1px #808080, inset 1px 1px #dfdfdf;
+}
+
+.window-title-bar {
+  background-color: #808080; 
+  color: #c0c0c0;
+  padding: 3px 2px 3px 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.win95-window.active .window-title-bar {
+  background-color: #000080; 
+  color: white;
+}
+
+.window-close-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
+.window-close-btn:active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.window-content-area {
+  background-color: #ffffff;
+  color: #000000;
+  margin: 4px;
+  padding: 10px;
+  height: calc(100% - 35px);
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: inset 1px 1px #000000;
+}
+
+.win95-taskbar {
+  background-color: #c0c0c0;
+  color: #000000;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-top: 2px solid #ffffff;
+  box-shadow: 0 -1px 2px rgba(0,0,0,0.2);
+  z-index: 9999;
+}
+
+.start-button {
+  background: #c0c0c0;
+  color: #000000;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.start-button:active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+.taskbar-apps {
+  flex-grow: 1;
+  display: flex;
+  gap: 4px;
+}
+
+.taskbar-app-btn {
+  background: #c0c0c0;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  padding: 4px 10px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+}
+
+.taskbar-app-btn.active {
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  background-image: repeating-linear-gradient(45deg, #c0c0c0, #c0c0c0 2px, #dfdfdf 2px, #dfdfdf 4px);
+}
+
+.taskbar-tray {
+  border-top: 2px solid #808080;
+  border-left: 2px solid #808080;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   BOOT SCREEN STYLES
+   ========================= */
+
+.boot-screen {
+  background-color: #000000;
+  color: #c0c0c0; /* Classic DOS gray */
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Courier New', Courier, monospace; /* Monospace is crucial for the DOS look */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.boot-text p {
+  margin: 4px 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.intro-highlight {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+  display: inline-block;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
