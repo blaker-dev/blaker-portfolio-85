@@ -1,5 +1,5 @@
 # Portfolio Website
-https://blaker-dev.github.io/blaker-portfolio/
+https://blaker-dev.github.io/blaker-portfolio-85/
 
 A Windows-85/95 themed personal website
 
