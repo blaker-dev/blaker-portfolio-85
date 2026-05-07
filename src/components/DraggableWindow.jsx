@@ -37,16 +37,35 @@ export const DraggableWindow = ({ win, activeWindow, bringToFront, closeWindow, 
       </div>
       <div className="window-content-area" style={{ userSelect: 'auto' }}>
           {Array.isArray(children) ? (
-            children.map((child, index) => (
-              <div key={index} className="window-content-item">
-                <div className="window-content-item-title">{child.title}</div>
-                <div className="window-content-item-description">{child.description}</div>
-                <div className="window-content-item-link"><a href={child.link} target="_blank" rel="noopener noreferrer">View Project</a></div>
-                <div className="window-content-item-img"><img src={`${import.meta.env.BASE_URL}${child.image}`} alt={child.title} /></div>
-              </div>
-            ))
+            children.map((item, index) => {
+              if (typeof item === 'object' && item !== null) {
+                return (
+                  <div key={index} className="content-segment">
+                    {item.title && <h3 className="project-title">{item.title}</h3>}
+                    
+                    {item.description && <p className="content-desc">{item.description}</p>}
+                    
+                    {item.link && (
+                      <div className="project-links">
+                        <a href={item.link} target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                      </div>
+                    )}
+                    
+                    {item.image && (
+                      <img 
+                        className="content-image"
+                        src={`${import.meta.env.BASE_URL}${item.image.startsWith('/') ? item.image.slice(1) : item.image}`} 
+                        alt={item.title || "content image"} 
+                      />
+                    )}
+                  </div>
+                );
+              }
+              
+              return <p key={index} className="contact-line">{item}</p>;
+            })
           ) : (
-            children
+            <p>{children}</p>
           )}
       </div>
     </div>

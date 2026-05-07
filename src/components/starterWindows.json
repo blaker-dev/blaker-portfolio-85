@@ -3,7 +3,17 @@
     "id": "about",
     "title": "about_me.txt",
     "icon": "📝",
-    "content": "This is all about me! Welcome to my portfolio"
+    "content": [
+      {
+        "description": "Hello! I'm Blake Robinson!"
+      },
+      {
+        "description": "I am an aspiring a passionate software developer with a love for creating innovative solutions."
+      },
+      {
+        "image": "/assets/about-me.png"
+      }
+    ]
   },
   {
     "id": "projects",
