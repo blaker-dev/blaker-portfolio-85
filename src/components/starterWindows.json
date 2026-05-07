@@ -9,12 +9,35 @@
     "id": "projects",
     "title": "my_projects",
     "icon": "📁",
-    "content": "Here is a list of my recent web development projects...'"
+    "content": [
+      {
+        "title": "<Project 1 Title>",
+        "description": "<Insert project description here>",
+        "link": "https://github.com/blaker-dev/<project1>",
+        "image": "./assets/project1.png"
+      },
+      {
+        "title": "<Project 2 Title>",
+        "description": "<Insert project description here>",
+        "link": "https://github.com/blaker-dev/<project2>",
+        "image": "./assets/project2.png"
+      },
+      {
+        "title": "<Project 3 Title>",
+        "description": "<Insert project description here>",
+        "link": "https://github.com/blaker-dev/<project3>",
+        "image": "./assets/project3.png"
+      }
+    ]
   },
   {
     "id": "contact",
     "title": "contact_info.txt",
     "icon": "🌐",
-    "content": "Email: b.robinson.cse@gmail.com \nGitHub: @blaker-dev \nLinkedIn: @blake-robinson002400"
+    "content": [
+      "Email: b.robinson.cse@gmail.com",
+      "GitHub: @blaker-dev",
+      "LinkedIn: @blake-robinson002400"
+    ]
   }
 ]

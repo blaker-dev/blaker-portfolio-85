@@ -36,7 +36,18 @@ export const DraggableWindow = ({ win, activeWindow, bringToFront, closeWindow, 
         </button>
       </div>
       <div className="window-content-area" style={{ userSelect: 'auto' }}>
-        {children}
+          {Array.isArray(children) ? (
+            children.map((child, index) => (
+              <div key={index} className="window-content-item">
+                <div className="window-content-item-title">{child.title}</div>
+                <div className="window-content-item-description">{child.description}</div>
+                <div className="window-content-item-link"><a href={child.link} target="_blank" rel="noopener noreferrer">View Project</a></div>
+                <div className="window-content-item-img"><img src={child.image} alt={child.title} /></div>
+              </div>
+            ))
+          ) : (
+            children
+          )}
       </div>
     </div>
   );

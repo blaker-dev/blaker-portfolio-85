@@ -107,12 +107,41 @@ body, html {
   color: #000000;
   margin: 4px;
   padding: 10px;
-  height: calc(100% - 35px);
+  
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  max-height: calc(100vh - 100px);
+  max-width: calc(100vw - 10px);
+
   border-top: 2px solid #808080;
   border-left: 2px solid #808080;
   border-right: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   box-shadow: inset 1px 1px #000000;
+}
+
+/* Custom Win95 Scrollbar */
+.window-content-area::-webkit-scrollbar {
+  width: 16px;
+}
+
+.window-content-area::-webkit-scrollbar-track {
+  background-color: #dfdfdf;
+  background-image: repeating-linear-gradient(45deg, #c0c0c0, #c0c0c0 2px, #dfdfdf 2px, #dfdfdf 4px);
+}
+
+.window-content-area::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff; /* 3D effect thumb */
+}
+
+.window-content-area::-webkit-scrollbar-button {
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #ffffff #808080 #808080 #ffffff;
+  display: block;
+  height: 16px;
 }
 
 .win95-taskbar {
@@ -226,4 +255,27 @@ body, html {
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+/* =========================
+   Project Specific Styles
+   ========================= */
+
+.window-content-item {
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.window-content-item-title {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.window-content-item-description {
+  font-size: 14px;
+}
+
+.window-content-item-link {
+  margin: 4px;
+  font-size: 14px;
 }
