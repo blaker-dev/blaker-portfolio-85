@@ -11,22 +11,22 @@
     "icon": "📁",
     "content": [
       {
-        "title": "<Project 1 Title>",
-        "description": "<Insert project description here>",
-        "link": "https://github.com/blaker-dev/<project1>",
-        "image": "/assets/project1.png"
+        "title": "Tab Order Manager",
+        "description": "a lightweight accessibility tool designed to solve a common hurdle in Google Slides: managing the `tab order` of slide elements.",
+        "link": "https://github.com/blaker-dev/tab-checker",
+        "image": "/assets/tab-order-checker.png"
       },
       {
-        "title": "<Project 2 Title>",
-        "description": "<Insert project description here>",
-        "link": "https://github.com/blaker-dev/<project2>",
-        "image": "/assets/project2.png"
+        "title": "ENG-HORIZON: Robotic Arm",
+        "description": "[IN-PROGRESS] Our goal is to design and build an autonomous robotic arm from scratch that can move a LEGO piece from a designated pickup spot into a cup.",
+        "link": "https://github.com/engineering-horizons/robotic-arm",
+        "image": "/assets/eng-horizon.png"
       },
       {
-        "title": "<Project 3 Title>",
-        "description": "<Insert project description here>",
-        "link": "https://github.com/blaker-dev/<project3>",
-        "image": "/assets/project3.png"
+        "title": "Mind Map Notes",
+        "description": "A note taking tool that allows you to create a mind map of nodes, linked based off your own conections",
+        "link": "https://github.com/blaker-dev/mind-map-notes",
+        "image": "/assets/mind-map-notes.png"
       }
     ]
   },
