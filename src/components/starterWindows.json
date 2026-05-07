@@ -14,19 +14,19 @@
         "title": "<Project 1 Title>",
         "description": "<Insert project description here>",
         "link": "https://github.com/blaker-dev/<project1>",
-        "image": "./assets/project1.png"
+        "image": "/assets/project1.png"
       },
       {
         "title": "<Project 2 Title>",
         "description": "<Insert project description here>",
         "link": "https://github.com/blaker-dev/<project2>",
-        "image": "./assets/project2.png"
+        "image": "/assets/project2.png"
       },
       {
         "title": "<Project 3 Title>",
         "description": "<Insert project description here>",
         "link": "https://github.com/blaker-dev/<project3>",
-        "image": "./assets/project3.png"
+        "image": "/assets/project3.png"
       }
     ]
   },

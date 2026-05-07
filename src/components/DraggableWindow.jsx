@@ -42,7 +42,7 @@ export const DraggableWindow = ({ win, activeWindow, bringToFront, closeWindow, 
                 <div className="window-content-item-title">{child.title}</div>
                 <div className="window-content-item-description">{child.description}</div>
                 <div className="window-content-item-link"><a href={child.link} target="_blank" rel="noopener noreferrer">View Project</a></div>
-                <div className="window-content-item-img"><img src={child.image} alt={child.title} /></div>
+                <div className="window-content-item-img"><img src={`${import.meta.env.BASE_URL}${child.image}`} alt={child.title} /></div>
               </div>
             ))
           ) : (
